@@ -7,5 +7,6 @@ module.exports = {
     /* for test */
     jwtExpiration: 60,          // 1 minute
     jwtRefreshExpiration: 30000,  // 2 minutes
+    baseurl:'https://my-first-app-0304.herokuapp.com'
   };
   

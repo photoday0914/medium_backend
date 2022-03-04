@@ -1,6 +1,7 @@
 const multer = require("multer");
 const path = require('path');
 const db = require("../../models");
+const config = require("../../config/auth.config");
 const { user: User} = db;
 
 const storage = multer.diskStorage({
@@ -50,7 +51,7 @@ module.exports = {
         } else {
           User.update(
             {
-              photo: 'http://localhost:3000/uploads/'.concat(req.file.filename)
+              photo: config.baseurl+'/uploads/'.concat(req.file.filename)
             }, 
             {
               where: {
@@ -58,7 +59,7 @@ module.exports = {
               }
             }).then ((err) => {            
             res.status(200).send ({              
-              photo: 'http://localhost:3000/uploads/'.concat(req.file.filename)
+              photo: config.baseurl+'/uploads/'.concat(req.file.filename)
             });  
           })
           // res.status(200).send ({
@@ -83,7 +84,7 @@ module.exports = {
           });
         } else {         
           res.status(200).send ({              
-            photo: 'http://localhost:3000/uploads/'.concat(req.file.filename)
+            photo: config.baseurl+'/uploads/'.concat(req.file.filename)
           });       
         
         }
