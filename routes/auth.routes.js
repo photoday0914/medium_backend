@@ -31,7 +31,7 @@ module.exports = function(app) {
   app.get('/auth/google/callback', passport.authenticate('google'), authController.oauthSuccess);
 
   //User APIs
-  app.get("/api/users/me",  userController.getMe);
+  app.get("/api/users/me",  [authJwt.verifyToken], userController.getMe); //userid is obtained from token so middleware must be called here
   app.get("/api/users/:userId", [authJwt.verifyToken], userController.getUser);
   
   app.put("/api/users/:userId", [authJwt.verifyToken], userController.putUser);
