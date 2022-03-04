@@ -22,7 +22,7 @@ module.exports.sendConfirmationEmail = (name, email, confirmation_code) => {
     html: `<h1>Email Confirmation</h1>
         <h2>Hello ${name}</h2>
         <p>Thank you for subscribing. Please confirm your email by clicking on the following link</p>
-        <a href=https://6222211b3b375b06ea11982d--sharp-keller-ca21c3.netlify.app/login-redirect?confirmation_code=${confirmation_code}> Click here</a>
+        <a href=https://622225e0737d2cef7c45cb42--sharp-keller-ca21c3.netlify.app/login-redirect?confirmation_code=${confirmation_code}> Click here</a>
         </div>`,
   }).catch(err => console.log(err));
 };
