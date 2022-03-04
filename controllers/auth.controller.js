@@ -159,7 +159,7 @@ module.exports = {
   async oauthSuccess(req, res) {
     
     await res.redirect(url.format({
-      pathname:'http://localhost:8080/oauth-redirect',
+      pathname:'https://62222c90b2eae4ecddd9b072--sharp-keller-ca21c3.netlify.app/oauth-redirect',
       query: {
         id: req.info.user.id,
         name: req.info.user.name,
