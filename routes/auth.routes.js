@@ -31,7 +31,7 @@ module.exports = function(app) {
   app.get('/auth/google/callback', passport.authenticate('google'), authController.oauthSuccess);
 
   //User APIs
-  app.get("/api/users/me", [authJwt.verifyToken], userController.getMe);
+  app.get("/api/users/me",  userController.getMe);
   app.get("/api/users/:userId", [authJwt.verifyToken], userController.getUser);
   
   app.put("/api/users/:userId", [authJwt.verifyToken], userController.putUser);
@@ -59,7 +59,7 @@ module.exports = function(app) {
   app.get("/api/posts/trending", postController.getTrending);
   app.get("/api/posts/offset/:offset", [authJwt.verifyToken], postController.getPostsWithOffset);
   app.get("/api/posts/:userId", [authJwt.verifyToken], postController.getPosts);
-  app.get("/api/post/:postId", [authJwt.verifyToken], postController.getPost);
+  app.get("/api/post/:postId", postController.getPost);
   app.get("/api/post/hashtag/:tagId", [authJwt.verifyToken], postController.getPostWithTag);
 
   //Search APIs- param:hashtag, keyword
