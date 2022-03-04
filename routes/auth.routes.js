@@ -56,7 +56,7 @@ module.exports = function(app) {
   app.post("/api/posts/:userId/respond", [authJwt.verifyToken], postController.postResponse);
   app.delete("/api/posts/:userId/respond", [authJwt.verifyToken], postController.deleteResponse);
 
-  app.get("/api/posts/trending", [authJwt.verifyToken], postController.getTrending);
+  app.get("/api/posts/trending", postController.getTrending);
   app.get("/api/posts/offset/:offset", [authJwt.verifyToken], postController.getPostsWithOffset);
   app.get("/api/posts/:userId", [authJwt.verifyToken], postController.getPosts);
   app.get("/api/post/:postId", [authJwt.verifyToken], postController.getPost);
