@@ -74,7 +74,7 @@ module.exports = function(app) {
 
   //Hashtags APIs
   app.get("/api/hashtags/recommended", [authJwt.verifyToken], hashtagController.getRecommendedTags);
-  app.get("/api/hashtags/post/:postId", [authJwt.verifyToken], hashtagController.getHashtags);
+  app.get("/api/hashtags/post/:postId", hashtagController.getHashtags);
 
   // app.post("/api/hashtags/add", hashtagController.addHashtagToTable);
   // app.delete("/api/hashtags/remove", hashtagController.removeHashtagFromTable);
@@ -83,7 +83,7 @@ module.exports = function(app) {
 
   //Comment APIs
   app.post("/api/comment/:postId", [authJwt.verifyToken],  commentController.createComment);
-  app.get("/api/comment/:postId", [authJwt.verifyToken], commentController.getComments);
+  app.get("/api/comment/:postId", commentController.getComments);
 
   
 };
