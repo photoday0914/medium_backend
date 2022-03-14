@@ -20,7 +20,7 @@ jobs:
       - run: npm install
         
       - name: Build task
-        run: npm run build
+        run: node app.js
 
       - name: Deploy to Server 1
         uses: easingthemes/ssh-deploy@main
