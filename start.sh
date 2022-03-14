@@ -1,1 +1,1 @@
-sudo node -v > versionlog
+ls > logfile
