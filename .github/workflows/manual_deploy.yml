@@ -26,6 +26,7 @@ jobs:
           REMOTE_HOST: ${{ secrets.HOST_DNS }}
           REMOTE_USER: ${{ secrets.USERNAME }}
           TARGET: ${{ secrets.TARGET_DIR }}
-      - name: Execute app.js
-        run: node ./home/ubuntu/backend/app.js
-          
+      - name: Execute app.js        
+        run: |
+          sh ./start.sh          
+        shell: bash
