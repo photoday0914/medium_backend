@@ -36,4 +36,6 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.EC2_SSH_KEY }}
           port: 22
-          script: node /home/ubuntu/backend/app.js
+          script: |
+            cd /home/ubuntu/backend
+            node app.js
