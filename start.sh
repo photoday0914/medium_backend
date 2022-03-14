@@ -1,1 +1,1 @@
-ls > logfile
+node app.js
