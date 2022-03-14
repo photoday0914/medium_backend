@@ -25,5 +25,7 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
           REMOTE_HOST: ${{ secrets.HOST_DNS }}
           REMOTE_USER: ${{ secrets.USERNAME }}
-          TARGET: ${{ secrets.TARGET_DIR }}
-          BUILD_SCRIPT: node app.js
+          TARGET: ${{ secrets.TARGET_DIR }
+      - name: execute app.js
+        run: node app.js
+          
