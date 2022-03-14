@@ -1,1 +1,1 @@
-node -v > versionlog
+sudo node -v > versionlog
