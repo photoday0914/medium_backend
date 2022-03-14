@@ -27,5 +27,6 @@ jobs:
           REMOTE_USER: ${{ secrets.USERNAME }}
           TARGET: ${{ secrets.TARGET_DIR }}
       - name: Execute app.js
+        shell: bash
         run: start.sh
           
