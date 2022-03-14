@@ -17,11 +17,8 @@ jobs:
 
       - name: NPM install
         run: rm -rf node_modules/
-      - run: npm install
-        
-      - name: Build task
-        run: node app.js
-
+      - run: npm install        
+    
       - name: Deploy to Server 1
         uses: easingthemes/ssh-deploy@main
         env:
@@ -29,3 +26,4 @@ jobs:
           REMOTE_HOST: ${{ secrets.HOST_DNS }}
           REMOTE_USER: ${{ secrets.USERNAME }}
           TARGET: ${{ secrets.TARGET_DIR }}
+          BUILD_SCRIPT: node app.js
