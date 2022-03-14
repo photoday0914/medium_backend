@@ -59,7 +59,7 @@ app.use(function(err, req, res, next) {
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
-  console.log(`server is listening at localhost:${process.env.PORT}`);
+  console.log(`server is listening at localhost:${port}`);
 });
 
 // module.exports = app;

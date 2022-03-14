@@ -1,9 +1,9 @@
 module.exports = {
-    HOST: "sql3.freemysqlhosting.net",
+    HOST: "localhost",
     PORT     : 3306 ,
-    USER: "sql3476849",
-    PASSWORD: "GRyCw3qlNt",
-    DB : 'sql3476849',
+    USER: "user1",
+    PASSWORD: "Root#2022",
+    DB : 'mydb',
     dialect: "mysql",
     pool: {
       max: 5,
