@@ -7,7 +7,7 @@ module.exports = {
     /* for test */
     jwtExpiration: 60,          // 1 minute
     jwtRefreshExpiration: 30000,  // 2 minutes
-    baseUrl:'http://ec2-3-83-2-186.compute-1.amazonaws.com:3000',
-    frontUrl:'http://ec2-3-83-2-186.compute-1.amazonaws.com'
+    baseUrl:'http://dnyfixrh3zi91.cloudfront.net:3000',
+    frontUrl:'http://dnyfixrh3zi91.cloudfront.net'
   };
   
