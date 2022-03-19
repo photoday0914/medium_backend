@@ -159,7 +159,7 @@ module.exports = {
   async oauthSuccess(req, res) {
     
     await res.redirect(url.format({
-      pathname:'https://banana.happybirthdayhub.com/oauth-redirect',
+      pathname:'http://banana.happybirthdayhub.com/oauth-redirect',
       query: {
         id: req.info.user.id,
         name: req.info.user.name,
