@@ -8,6 +8,6 @@ module.exports = {
     jwtExpiration: 60,          // 1 minute
     jwtRefreshExpiration: 30000,  // 2 minutes
     baseUrl:'http://d3pyg5ro5lpu2a.cloudfront.net',
-    frontUrl:'http://d1df7df4e6bcjn.cloudfront.net'
+    frontUrl:'http://banana.happybirthdayhub.com'
   };
   
