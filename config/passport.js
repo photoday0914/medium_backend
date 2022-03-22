@@ -21,7 +21,7 @@ passport.use(new GoogleStrategy(
     clientID      : process.env.GOOGLE_CLIENT_ID,
     clientSecret  : process.env.GOOGLE_SECRET,
     // callbackURL   : '/auth/google/callback',
-    callbackURL   : config.baseUrl + '/auth/google/callback',
+    callbackURL   : config.baseUrl + '/api/auth/google/callback',
     passReqToCallback   : true
   }, async function(req, googleToken, refreshToken, profile, done){
     // console.log('profile: ', profile);
